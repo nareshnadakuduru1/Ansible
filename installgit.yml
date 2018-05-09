@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   tasks: 
+   - name: "Install common software requirements"
+     with_items: 
+      - git
+      - ntp
+      - vim
+     yum: "pkg={{ item }} state=installed"

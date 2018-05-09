@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Creating the file by condition
+    file: path=/opt/verizon.txt state=touch
+    when:
+      - ansible_distribution == "CentOS"
+      - ansible_distribution_version == "7.4.1708"

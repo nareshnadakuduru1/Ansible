@@ -1,0 +1,17 @@
+---
+- hosts: all
+  pre_tasks: 
+    - setup
+  tasks: 
+    - name: "run httpd apache"
+      yum: 
+        name: httpd
+        state: present
+    - name: "deploy the index.html"
+      template: 
+        src: /root/Documents/Ansible/Workspace/index.html
+        dest: /var/www/html
+    - name: "stating httpd"
+      service: 
+        name: httpd
+        state: started
