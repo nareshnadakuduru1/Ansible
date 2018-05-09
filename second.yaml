@@ -1,0 +1,7 @@
+#second.yml
+---
+- hosts: all
+  gather_facts: no
+
+  tasks:
+    - include: common.yaml

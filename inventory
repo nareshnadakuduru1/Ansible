@@ -1,6 +1,6 @@
 [hosts]
-#localhost
-10.76.118.24
+localhost
+#10.76.118.24
 [hosts:vars]
 ansible_ssh_user=root
 ansible_ssh_pass=root
